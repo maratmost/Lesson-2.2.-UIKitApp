@@ -34,7 +34,33 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="luu-l9-BgN">
                                 <rect key="frame" x="14" y="151.5" width="347" height="31"/>
+                                <connections>
+                                    <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="nxE-8o-nVG"/>
+                                </connections>
                             </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите номер" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CIb-fp-YHQ">
+                                <rect key="frame" x="16" y="197.5" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHr-7M-0bU">
+                                <rect key="frame" x="16" y="263.5" width="343" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="naa-gC-MsC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="mailButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CKf-FD-Qum"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1DB-tj-Sf6">
+                                <rect key="frame" x="16" y="343.5" width="343" height="34.5"/>
+                                <connections>
+                                    <action selector="datePickerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="mN5-eS-xFX"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -42,25 +68,44 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y87-CN-tbm" secondAttribute="trailing" constant="16" id="6E2-CD-6pW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3RS-6w-tlB" secondAttribute="trailing" constant="16" id="9iE-4n-uc3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="luu-l9-BgN" secondAttribute="trailing" constant="16" id="C6u-Xx-ygZ"/>
+                            <constraint firstItem="xHr-7M-0bU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FjT-71-1px"/>
                             <constraint firstItem="luu-l9-BgN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JZ4-1s-aCd"/>
+                            <constraint firstItem="xHr-7M-0bU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Jt2-TB-LnP"/>
+                            <constraint firstItem="1DB-tj-Sf6" firstAttribute="leading" secondItem="xHr-7M-0bU" secondAttribute="leading" id="Kv0-uq-C2Z"/>
+                            <constraint firstItem="CIb-fp-YHQ" firstAttribute="top" secondItem="luu-l9-BgN" secondAttribute="bottom" constant="16" id="LSC-rM-P6D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1DB-tj-Sf6" secondAttribute="trailing" constant="16" id="dcR-XZ-1IF"/>
                             <constraint firstItem="3RS-6w-tlB" firstAttribute="top" secondItem="Y87-CN-tbm" secondAttribute="bottom" constant="32" id="eA0-rQ-zFL"/>
+                            <constraint firstItem="1DB-tj-Sf6" firstAttribute="top" secondItem="xHr-7M-0bU" secondAttribute="bottom" constant="30" id="fp1-Mp-Aac"/>
                             <constraint firstItem="luu-l9-BgN" firstAttribute="top" secondItem="3RS-6w-tlB" secondAttribute="bottom" constant="16" id="ijg-gq-cHb"/>
                             <constraint firstItem="3RS-6w-tlB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="izx-pO-GAO"/>
+                            <constraint firstItem="CIb-fp-YHQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nKs-6f-vZW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CIb-fp-YHQ" secondAttribute="trailing" constant="16" id="pTg-jd-dql"/>
+                            <constraint firstItem="1DB-tj-Sf6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="r0q-ta-35E"/>
+                            <constraint firstItem="xHr-7M-0bU" firstAttribute="top" secondItem="CIb-fp-YHQ" secondAttribute="bottom" constant="32" id="vWR-Zt-ntY"/>
                             <constraint firstItem="Y87-CN-tbm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="y17-VF-h3s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xHr-7M-0bU" secondAttribute="trailing" constant="16" id="zTH-De-gdQ"/>
                             <constraint firstItem="Y87-CN-tbm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="zjE-87-aKv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CIb-fp-YHQ" secondAttribute="trailing" constant="16" id="zy3-AQ-lcf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="1DB-tj-Sf6" id="CS8-DZ-XMS"/>
+                        <outlet property="mainButton" destination="xHr-7M-0bU" id="2Ja-DZ-JUB"/>
                         <outlet property="mainLabel" destination="3RS-6w-tlB" id="aFl-sw-90H"/>
                         <outlet property="segmentedControl" destination="Y87-CN-tbm" id="t2z-xt-sYw"/>
+                        <outlet property="slider" destination="luu-l9-BgN" id="Wzo-ec-wmC"/>
+                        <outlet property="textField" destination="CIb-fp-YHQ" id="PD4-s8-cMv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="262" y="-36"/>
+            <point key="canvasLocation" x="436" y="18.440779610194905"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
